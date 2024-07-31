@@ -6,7 +6,7 @@ export default async function middleware(req: NextRequest) {
     const token = await getToken({ req: req, secret: process.env.NEXTAUTH_SECRET });
     const isAuthenticated = token ? true : false;
     const pathSegments = req.nextUrl.pathname.split('/');
-
+    
     if (!isAuthenticated && (pathSegments[0] == 'dashboard')) {
         const loginPath = `/auth/login/`;
         const loginURL = new URL(loginPath, req.nextUrl.origin);

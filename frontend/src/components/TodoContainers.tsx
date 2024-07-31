@@ -31,7 +31,7 @@ export default function TodoContainers(){
     const handleDrop= async (e:React.DragEvent<HTMLDivElement>,status:TodoType,targetRef:React.RefObject<HTMLDivElement>)=>{
         e.preventDefault();
         const taskDragedId = e.dataTransfer.getData("text/plain");
-        targetRef.current?.classList.remove("bg-blue-300");
+        targetRef.current?.classList.remove("bg-blue-400");
         dispatch(updateTodos(todoState.todos.map(todo=>{
             if(todo._id === taskDragedId){
                 return {...todo,status};

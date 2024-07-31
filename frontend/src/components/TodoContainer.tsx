@@ -21,11 +21,11 @@ export default function TodoContainer({
 
     const handleDragOver=(e:React.DragEvent<HTMLDivElement>)=>{
         e.preventDefault();
-        targetRef.current?.classList.add("bg-blue-300");
+        targetRef.current?.classList.add("bg-blue-400");
     }
     const handleDragLeave=(e:React.DragEvent<HTMLDivElement>)=>{
         e.preventDefault();
-        targetRef.current?.classList.remove("bg-blue-300");
+        targetRef.current?.classList.remove("bg-blue-400");
     }
     const dispatch = useAppDispatch()
     return(

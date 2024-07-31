@@ -38,7 +38,7 @@ export default function SideBar(){
               </div>
               <button 
               className="bg-[#edecf5fa] px-3 py-1 rounded-md text-sm"
-              onClick={()=>{signOut({callbackUrl: "http://localhost:3000/auth/login/"})}}
+              onClick={()=>{signOut({callbackUrl: `${window.location.origin}/auth/login/`})}}
               >
                 Logout
               </button>
